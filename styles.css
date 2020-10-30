@@ -1,0 +1,70 @@
+/*
+ * Styles for testovoe zadanie
+ */
+ body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ .table__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+  .table__col--responsive-width {
+    flex-grow: 1;
+    overflow: hidden;
+    border: 1px solid black;
+    white-space: nowrap;
+    border-collapse: collapse;
+    padding-left: 15px;
+  }
+  .table__col--fixed-width {
+    flex: 0 0 120px;
+    overflow: hidden;
+    border: 1px solid black;
+    white-space: nowrap;
+    border-collapse: collapse;
+    padding-left: 15px;
+    
+  }
+  .table__col--flex-container {
+    flex: 0 0 274px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+  }
+  .table__col--color1 {
+    background-color: #8CB2D2;
+  }
+  .table__col--color2 {
+    background-color: #C2D69B;
+  }
+  .table__col--color3 {
+    background-color: white;
+  }
+  .table__col--fixed-height {
+    flex: 1 0;
+
+  }
+
+  
+  @media screen and (max-width: 800px) {
+    .table__col--fixed-width {
+      flex: 3;
+    }
+    .table__col--flex-container {
+      flex-direction: column;
+      flex-basis: 120px;
+    }
+    .table__col--fixed-height {
+      flex: 1 0;
+
+    }
+  
+  }
+  
